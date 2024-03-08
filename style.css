@@ -1,0 +1,26 @@
+.loading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.container{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.container button{
+    margin: 2rem;
+}
+
+#time{
+    background-color: greenyellow;
+    padding: 10px;
+    border-radius: 10px;
+}
+
