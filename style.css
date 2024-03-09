@@ -7,7 +7,7 @@
 
 .container{
     width: 100vw;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -18,9 +18,5 @@
     margin: 2rem;
 }
 
-#time{
-    background-color: greenyellow;
-    padding: 10px;
-    border-radius: 10px;
-}
+
 
