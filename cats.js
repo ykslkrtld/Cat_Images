@@ -17,15 +17,16 @@ const showTime = () => {
 };
 
 const randomCat = async () => {
+  catImg.innerHTML = `<img src="./img/loading.gif" class="w-100 h-100">`;
+
   try {
-    // loadingDiv.style.display = "block";
-    // containerDiv.style.display = "none";
     const res = await fetch(
       "https://api.thecatapi.com/v1/images/search?limit=10"
     );
     if (!res.ok) {
       throw new Error(`${res.status}`);
     }
+    catImg.innerHTML = ``;
     const data = await res.json();
     displayCats(data);
   } catch (error) {
@@ -34,7 +35,6 @@ const randomCat = async () => {
 };
 
 const displayCats = (item) => {
-  // catImg.innerHTML = "";
   item.forEach(({ url }) => {
     catImg.innerHTML += `
     <div class="col-12 col-sm-6 col-lg-4 mb-3">
@@ -44,8 +44,6 @@ const displayCats = (item) => {
     </div>
       `;
   });
-  // loadingDiv.style.display = "none";
-  // containerDiv.style.display = "flex";
 };
 
 randomCat();
